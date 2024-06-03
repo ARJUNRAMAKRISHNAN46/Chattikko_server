@@ -62,7 +62,6 @@ export const login = async (req, res) => {
       password,
       user?.password || ""
     );
-    console.log("🚀 ~ login ~ password:", password, user?.password);
 
     if (!user || !isPasswordCorrect) {
       return res.status(400).json({
